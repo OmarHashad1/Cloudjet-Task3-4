@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00bf63, #001E00);
+    min-height: 100vh;
+    position: relative;
+    font-family: "Host Grotesk",Arial, sans-serif;
+    
+}
+#mainBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#deleteProductBody::before{
+    content: "Delete Product";
+    font-size: 15rem; 
+
+}
+
+#updateProductBody::before{
+    content: "Update Product";
+    font-size: 15rem; 
+}
+
+#addProductBody::before{
+    content: "Add Product";
+    font-size: 15rem; 
+}
+
+#getAllProductBody::before{
+    content: "Get All Product";
+    font-size: 14rem; 
+
+}
+body::before {
+    content: "CloudJet";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+    pointer-events: none;
+    white-space: nowrap;
+}
+        
+#getAllProductsContainer{
+height: 300px;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: hsl(210, 16%, 93%,0.2);
+    padding: 50px 100px;
+    border-radius: 10px;
+}
+
+form label{
+    color: rgb(255, 248, 248);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+form input{
+    width: 350px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.284);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form textarea{
+width: 350px;
+height: 120px;
+resize: vertical;
+max-height: 200px;
+background-color: rgba(255, 255, 255, 0.284);
+border: 1px solid rgb(255, 255, 255);
+}
+form button{
+    margin: 30px auto;
+    padding: 15px 60px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white ;
+    border-radius: 5px;
+
+}
+#productsList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+.menu-grid {
+    width: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    background: transparent;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+}
+
+.menu-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.add-item { border-color: #28a745; }
+.add-item:hover { border-color: #28a745; background: linear-gradient(135deg, #28a745, #20c997); color: white; }
+.add-item .menu-icon { color: #28a745; }
+
+.get-item { border-color: #28a745 }
+.get-item:hover {  border-color: #28a745; background: linear-gradient(135deg, #28a745, #20c997); color: white; }
+.get-item .menu-icon {  color: #28a745; }
+
+.update-item { border-color: #28a745 }
+.update-item:hover {border-color: #28a745; background: linear-gradient(135deg, #28a745, #20c997); color: white; }
+
+.delete-item { border-color: #dc3545; }
+.delete-item:hover { border-color: #dc3545; background: linear-gradient(135deg, #dc3545, #e83e8c); color: white; }
+.delete-item .menu-icon { color: #dc3545; }
+.delete-item:hover .menu-icon { color: white; }
+
+.menu-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.menu-description {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .menu-item {
+        flex: 1 1 100%;
+    }
+}
